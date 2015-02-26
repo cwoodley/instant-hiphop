@@ -1,0 +1,67 @@
+/*
+-----------------------
+
+  Mobile First SASS
+  http://blog.12spokes.com/web-design-development/faster-mobile-first-automagically-creating-static-layouts-for-old-ie-with-sass/
+
+  example:
+  
+  nav.main-nav {
+    @include breakpoint-ie(tablet) { float: right; }    
+  }
+  
+  compiles to:
+  @media only screen and (min-width: 768px) {
+    nav.main-nav { float: right; }  
+  }
+   
+  .oldie nav.main-nav { float: right; }
+
+----------------------- 
+  
+*/
+@mixin breakpoint($breakpoint) {
+ 
+  @if $breakpoint == mini-tablet {
+    @media only screen and (min-width: 480px) { @content; }
+  }
+ 
+  @else if $breakpoint == tablet {
+    @media only screen and (min-width: 768px) { @content; }
+  }
+ 
+  @else if $breakpoint == desktop {
+    @media only screen and (min-width: 960px) { @content; }    
+  }
+ 
+}
+ 
+/// "breakpoint-ie" mixin
+@mixin breakpoint-ie($breakpoint) {
+ 
+  @include breakpoint($breakpoint) { @content; }
+  .oldie & { @content; }
+ 
+}
+
+/* End Mobile First SASS */
+
+
+/*  Sticky Footer
+    http://www.cssstickyfooter.com/using-sticky-footer-code.html
+---------------------------------------- */
+html, body {height: 100%;}
+
+#page-wrapper {min-height: 100%;}
+
+#main {overflow:auto;
+  padding-bottom: 40px;}  /* must be same height as the footer */
+
+#footer {position: relative;
+  margin-top: -40px; /* negative value of footer height */
+  height: 40px;
+  clear:both;}
+  
+/* clearfix
+---------------------------------------- */
+.clearfix:after {content: ".";display: block;clear: both;visibility: hidden;line-height: 0;height: 0;} .clearfix {display: inline-block;} html[xmlns] .clearfix {display: block;} * html .clearfix {height: 1%;}

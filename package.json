@@ -1,0 +1,23 @@
+{
+  "name": "ihh",
+  "version": "0.0.0",
+  "private": true,
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-contrib-clean": "latest",
+    "grunt-contrib-compress": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-copy": "latest",
+    "grunt-contrib-imagemin": "latest",
+    "grunt-contrib-sass": "~0.5.1",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-express": "~1.0.0-beta2",
+    "grunt-obfuscator": "^0.1.0",
+    "grunt-open": "latest",
+    "grunt-processhtml": "~0.2.6",
+    "grunt-targethtml": "^0.2.6",
+    "matchdep": "~0.1.2"
+  },
+  "author": "Cale Woodley"
+}

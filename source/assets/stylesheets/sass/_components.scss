@@ -1,0 +1,20 @@
+.container {
+  @include outer-container;
+}
+.alignleft {display:inline;float:left;}
+.alignright {display:inline;float:right;}
+
+.italicise {
+  font-style: italic;
+}
+
+.omega {
+  @include omega();
+}
+
+ul.nostyle {
+  li {
+    list-style: none;
+    margin-left: 0;
+  }
+}

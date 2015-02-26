@@ -1,0 +1,30 @@
+// @import "bourbon/bourbon";
+@import "reset";
+// @import "grid-settings";
+// @import "neat/neat";
+
+// @import "fa/font-awesome";
+// @import "utilities";
+// @import "variables";
+// @import "components";
+
+body {
+
+}
+
+
+#overlay {
+  position: absolute;
+  z-index: 10;
+}
+
+#loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+#player {
+  display: none;
+  z-index: 5;
+}
